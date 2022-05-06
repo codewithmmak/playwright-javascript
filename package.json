@@ -1,0 +1,20 @@
+{
+  "name": "playwright-javascript",
+  "version": "1.0.0",
+  "description": "This is Test Automation framework designed using Playwright, and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf allure-results/ && rimraf allure-report/",
+    "test": "playwright test",
+    "headedTest": "playwright test --headed",
+    "e2e": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
+    "allure-report": "npx allure generate ./allure-results && allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@playwright/test": "^1.21.1",
+    "allure-playwright": "^2.0.0-beta.16",
+    "rimraf": "^3.0.2"
+  }
+}

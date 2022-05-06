@@ -1,0 +1,49 @@
+---
+# Playwright and JavaScript Setup Guide
+---
+### This is a test automation framework designed using Playwright and JavaScript.
+> Playwright enables reliable end-to-end testing for modern web apps.
+
+## Getting started
+
+### Pre-requisites
+* Download and install Node.js
+* Download and install any Text Editor like Visual Code/Sublime/Brackets
+
+### Setup Visual Code
+* Install GitLens Extension from the Marketplace: `GitLens — Git supercharged by GitKraken`
+* Go to Visual Code Preference > Setting and search `formatOnSave` and enable/ON it.
+
+### Setup Scripts 
+* Clone the repository into a folder
+* Go to Project root directory and install Dependency: `npm install`
+* All the dependencies from package.json would be installed in node_modules folder.
+
+### How to write Test
+* Add new spec under `e2e-tests` folder
+* Name the file as <testname>.spec.js (e.g. home.spec.js)
+* Create folder under page-objects/pages as <page-name> (e.g. homePage)
+* Under page folder create constant, helper and page object file.
+    * <page-name>.constants.js (e.g. home.constants.js)
+    * <page-name>.helper.js (e.g. home.helper.js)
+    * <page-name>.po.js (e.g. home.po.js)
+
+### How to Run Test
+* Go to Project root directory and run command: `npm test`
+* If you want to run e2e tests then run command: `npm run e2e`
+
+### How to Update local npm packages
+* Go to Project root directory and run command: `npm update`
+
+### How to view HTML report
+* Go to Project root directory: `./playwright-report/index.html`
+
+### How to view failed test screenshot
+* Go to Project root directory: `./test-results/`
+
+### Sample Allure Test Report
+![Playwright and JavaScript Test Report](./assets/test-report.png?raw=true "Playwright and JavaScript Test Report")
+
+![Playwright and JavaScript Test Report Expanded View](./assets/test-report-expanded-view.png?raw=true "Playwright and JavaScript Test Report Expanded View")
+
+
