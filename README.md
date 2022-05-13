@@ -1,8 +1,8 @@
 ---
 # Playwright and JavaScript Setup Guide
 ---
-### This is a test automation framework designed using Playwright and JavaScript.
-> Playwright enables reliable end-to-end testing for modern web apps.
+
+#####
 
 ## Getting started
 
