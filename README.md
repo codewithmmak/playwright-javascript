@@ -48,5 +48,16 @@
 
 
 ### Run Test on SauceLabs
-* `https://docs.saucelabs.com/web-apps/automated-testing/playwright/quickstart/`
-* Run tests: `npm saucectl run`
+* SauceLabs Quickstart `https://docs.saucelabs.com/web-apps/automated-testing/playwright/quickstart/`
+    * Set Environment Variables:
+        * Open Terminal
+        * Run `touch ~/.bash_profile; open ~/.bash_profile`
+        * In TextEdit, add
+        * `export SAUCE_USERNAME=“YOUR USERNAME”`
+        * `export SAUCE_ACCESS_KEY="YOUR ACCESS KEY"`
+        * Save the .bash_profile file and Quit (Command + Q) Text Edit.
+        * In Terminal echo $SAUCE_USERNAME
+        * In Terminal echo $SAUCE_ACCESS_KEY
+    * Configure:
+    `saucectl config` 
+    * Run tests: `npm saucectl run`
