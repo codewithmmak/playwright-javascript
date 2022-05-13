@@ -8,7 +8,7 @@ test.describe('Home Tests', () => {
         await homePage.navigate();
     });
 
-    test('Verify Home page title', async ({ page }) => {
+    test.only('Verify Home page title', async ({ page }) => {
         const homePage = new HomePage(page);
         await homePage.pageTitle();
     });

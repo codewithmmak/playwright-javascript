@@ -12,7 +12,7 @@ exports.HomePage = class HomePage {
     }
 
     async navigate() {
-        await this.page.goto('');
+        await this.page.goto('https://demo.vercel.store');
         // Accept cookies
         await this.acceptCookies.click();
     }

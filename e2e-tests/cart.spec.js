@@ -11,7 +11,7 @@ test.describe('Cart Tests', () => {
         await homePage.pageTitle();
     });
 
-    test('Verify user is able to add product to Cart', async ({ page }) => {
+    test.skip('Verify user is able to add product to Cart', async ({ page }) => {
         const searchPage = new SearchPage(page);
         await searchPage.navigatetoProductDetailPage();
         await searchPage.pageTitle();
@@ -21,7 +21,7 @@ test.describe('Cart Tests', () => {
         await cartPage.selectSize();
         await cartPage.addToCart();
         // await page.waitForLoadState();
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(10000);
         await cartPage.productInCart();
     });
 })

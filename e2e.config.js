@@ -77,18 +77,18 @@ const config = {
         // },
 
         /* Test against mobile viewports. */
-        // {
-        //     name: 'Mobile Chrome',
-        //     use: {
-        //         ...devices['Galaxy S9+'],
-        //     },
-        // },
-        // {
-        //     name: 'Mobile Safari',
-        //     use: {
-        //         ...devices['iPhone 12'],
-        //     },
-        // },
+        {
+            name: 'Mobile Chrome',
+            use: {
+                ...devices['Galaxy S9+'],
+            },
+        },
+        {
+            name: 'Mobile Safari',
+            use: {
+                ...devices['iPhone X'],
+            },
+        },
 
         /* Test against branded browsers. */
         // {
@@ -97,12 +97,12 @@ const config = {
         //     channel: 'msedge',
         //   },
         // },
-        {
-            name: 'Google Chrome',
-            use: {
-                channel: 'chrome',
-            },
-        }
+        // {
+        //     name: 'Google Chrome',
+        //     use: {
+        //         channel: 'chrome',
+        //     },
+        // }
 
     ],
 

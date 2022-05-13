@@ -47,3 +47,6 @@
 ![Playwright and JavaScript Test Report Expanded View](./assets/test-report-expanded-view.png?raw=true "Playwright and JavaScript Test Report Expanded View")
 
 
+### Run Test on SauceLabs
+* `https://docs.saucelabs.com/web-apps/automated-testing/playwright/quickstart/`
+* Run tests: `npm saucectl run`
