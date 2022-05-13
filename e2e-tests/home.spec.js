@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { HomePage } = require('./page-objects/pages/HomePage');
+const { HomePage } = require('./page-objects/HomePage');
 
 test.describe('Home Tests', () => {
 
@@ -8,7 +8,7 @@ test.describe('Home Tests', () => {
         await homePage.navigate();
     });
 
-    test.only('Verify Home page title', async ({ page }) => {
+    test('Verify Home page title', async ({ page }) => {
         const homePage = new HomePage(page);
         await homePage.pageTitle();
     });
