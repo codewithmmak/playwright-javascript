@@ -2,8 +2,6 @@
 # Playwright and JavaScript Setup Guide
 ---
 
-#####
-
 ## Getting started
 
 ### Pre-requisites
