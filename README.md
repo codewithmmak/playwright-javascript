@@ -2,6 +2,13 @@
 # Playwright and JavaScript Setup Guide
 ---
 
+## Features of this framework
+* Design Pattern: Page Object Model
+* Reporting: `Allure https://www.npmjs.com/package/allure-playwright`
+* Cloud Integration: `SauceLab https://saucelabs.com/`
+* Code Formatter: `Prettier https://prettier.io/`
+* Deep Deletion: `https://www.npmjs.com/package/rimraf`
+
 ## Getting started
 
 ### Pre-requisites
@@ -9,7 +16,7 @@
 * Download and install any Text Editor like Visual Code/Sublime/Brackets
 
 ### Setup Visual Code
-* Install GitLens Extension from the Marketplace: `GitLens — Git supercharged by GitKraken`
+* Install GitLens Extension from the Marketplace: `GitLens — Git supercharged by GitKraken https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens`
 * Go to Visual Code Preference > Setting and search `formatOnSave` and enable/ON it.
 
 ### Setup Scripts 
@@ -45,7 +52,7 @@
 ![Playwright and JavaScript Test Report Expanded View](./assets/test-report-expanded-view.png?raw=true "Playwright and JavaScript Test Report Expanded View")
 
 
-### Run Test on SauceLabs
+### How to run Test on SauceLabs
 * SauceLabs Quickstart `https://docs.saucelabs.com/web-apps/automated-testing/playwright/quickstart/`
     * Set Environment Variables:
         * Open Terminal

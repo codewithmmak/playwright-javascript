@@ -1,29 +1,28 @@
-const { test, expect } = require('@playwright/test');
-const { HomePage } = require('./page-objects/HomePage');
+const { test, expect } = require("@playwright/test");
+const { HomePage } = require("./page-objects/HomePage");
 
-test.describe('Home Tests', () => {
+test.describe("Home Tests", () => {
+  test.beforeEach(async ({ page }) => {
+    const homePage = new HomePage(page);
+    await homePage.navigate();
+  });
 
-    test.beforeEach(async ({ page }) => {
-        const homePage = new HomePage(page);
-        await homePage.navigate();
-    });
+  test("Verify Home page title", async ({ page }) => {
+    const homePage = new HomePage(page);
+    await homePage.pageTitle();
+  });
 
-    test('Verify Home page title', async ({ page }) => {
-        const homePage = new HomePage(page);
-        await homePage.pageTitle();
-    });
+  test("Verify Logo on Home page", async ({ page }) => {
+    const homePage = new HomePage(page);
+    await homePage.logo();
+  });
 
-    test('Verify Logo on Home page', async ({ page }) => {
-        const homePage = new HomePage(page);
-        await homePage.logo();
-    });
-
-    test('Verify top navigation on Home page', async ({ page }) => {
-        const homePage = new HomePage(page);
-        await expect(homePage.topNavLinksLoc).toHaveText([
-            'All',
-            'Apparel',
-            'Shop All'
-        ]);
-    });
-})
+  test("Verify top navigation on Home page", async ({ page }) => {
+    const homePage = new HomePage(page);
+    await expect(homePage.topNavLinksLoc).toHaveText([
+      "All",
+      "Apparel",
+      "Shop All",
+    ]);
+  });
+});

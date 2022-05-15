@@ -8,13 +8,16 @@
     "test": "playwright test",
     "headedTest": "playwright test --headed",
     "e2e": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
-    "allure-report": "npx allure generate ./allure-results && allure open"
+    "allure-report": "npx allure generate ./allure-results && allure open",
+    "prettierCI": "npx prettier --check ./e2e-tests",
+    "prettierWrite": "npx prettier --write ./e2e-tests"
   },
   "keywords": [],
   "author": "",
   "devDependencies": {
     "@playwright/test": "^1.21.1",
     "allure-playwright": "^2.0.0-beta.16",
+    "prettier": "2.6.2",
     "rimraf": "^3.0.2",
     "saucectl": "^0.97.0"
   }
