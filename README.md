@@ -5,6 +5,7 @@
 ## Features of this framework
 * Design Pattern: Page Object Model
 * Reporting: `Allure https://www.npmjs.com/package/allure-playwright`
+[Allure Reporting](https://www.npmjs.com/package/allure-playwright)
 * Cloud Integration: `SauceLab https://saucelabs.com/`
 * Code Formatter: `Prettier https://prettier.io/`
 * Deep Deletion: `https://www.npmjs.com/package/rimraf`
