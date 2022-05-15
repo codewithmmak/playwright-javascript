@@ -3,7 +3,7 @@
 ---
 
 ## Features of this framework
-* Design Pattern: Page Object Model
+* [Design Pattern: Page Object Model](https://playwright.dev/docs/test-pom)
 * [Reporting: Allure](https://www.npmjs.com/package/allure-playwright)
 * [Cloud Integration: SauceLab](https://saucelabs.com/)
 * [Code Formatter: Prettier](https://prettier.io/)
