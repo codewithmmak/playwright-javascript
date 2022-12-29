@@ -4,7 +4,7 @@
   "description": "This is Test Automation framework designed using Playwright, and JavaScript",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf allure-results/ && rimraf allure-report/ && rimraf playwright-report/",
+    "clean": "rimraf allure-report/ && rimraf playwright-report/",
     "test": "playwright test",
     "headedTest": "playwright test --headed",
     "single-test-file": "npm run clean && playwright test cart.spec.js --reporter=line",
@@ -16,14 +16,7 @@
     "test-junit-reporter": "npm run clean && playwright test cart.spec.js --reporter=junit",
     "e2e": "npm run clean && playwright test -c e2e.config.js",
     "e2e-commandline-reporter": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
-    "single-test-on-lt": "npx playwright test --config=./lt.single.config.js",
-    "parallel-test-on-lt": "npx playwright test --config=./lt.config.js",
-    "allure-report": "npx allure generate ./allure-results && allure open",
-    "prettierCI": "npx prettier --check ./e2e-tests",
-    "prettierWrite": "npx prettier --write ./e2e-tests"
-  },
-  "engines": {
-    "node": ">=12.0.0"
+    "allure-report": "npx allure generate ./allure-results && allure open"
   },
   "keywords": [],
   "author": "Code with MMAK",
@@ -31,8 +24,8 @@
     "@playwright/test": "^1.29.1",
     "allure-commandline": "^2.20.1",
     "allure-playwright": "^2.0.0-beta.23",
+    "copyfiles": "^2.4.1",
     "npm-check-updates": "^16.6.2",
-    "prettier": "2.8.1",
     "rimraf": "^3.0.2",
     "saucectl": "^0.117.1"
   }

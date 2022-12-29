@@ -6,7 +6,6 @@
 * [Design Pattern: Page Object Model](https://playwright.dev/docs/test-pom)
 * [Reporting: Allure](https://www.npmjs.com/package/allure-playwright)
 * [Cloud Integration: SauceLab](https://saucelabs.com/)
-* [Code Formatter: Prettier](https://prettier.io/)
 * [Deep Deletion](https://www.npmjs.com/package/rimraf)
 
 ## Getting started
