@@ -4,18 +4,29 @@
   "description": "This is Test Automation framework designed using Playwright, and JavaScript",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf allure-results/ && rimraf allure-report/",
+    "clean": "rimraf allure-results/ && rimraf allure-report/ && rimraf playwright-report/",
     "test": "playwright test",
     "headedTest": "playwright test --headed",
     "single-test-file": "npm run clean && playwright test cart.spec.js --reporter=line",
-    "test-line-reporter": "npm run clean && playwright test -c e2e.config.js --reporter=line",
-    "e2e": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
+    "test-list-reporter": "npm run clean && playwright test cart.spec.js --reporter=list",
+    "test-line-reporter": "npm run clean && playwright test cart.spec.js --reporter=line",
+    "test-dot-reporter": "npm run clean && playwright test cart.spec.js --reporter=dot",
+    "test-html-reporter": "npm run clean && playwright test cart.spec.js --reporter=html",
+    "test-json-reporter": "npm run clean && playwright test cart.spec.js --reporter=json",
+    "test-junit-reporter": "npm run clean && playwright test cart.spec.js --reporter=junit",
+    "e2e": "npm run clean && playwright test -c e2e.config.js",
+    "e2e-commandline-reporter": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
+    "single-test-on-lt": "npx playwright test --config=./lt.single.config.js",
+    "parallel-test-on-lt": "npx playwright test --config=./lt.config.js",
     "allure-report": "npx allure generate ./allure-results && allure open",
     "prettierCI": "npx prettier --check ./e2e-tests",
     "prettierWrite": "npx prettier --write ./e2e-tests"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Code with MMAK",
   "devDependencies": {
     "@playwright/test": "^1.29.1",
     "allure-commandline": "^2.20.1",
