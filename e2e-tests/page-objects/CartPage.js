@@ -7,13 +7,13 @@ exports.CartPage = class CartPage {
     this.sizeBtnLoc = page.locator("button[aria-label='size l']");
     this.addToCartBtnLoc = page.locator("//button[text()='Add To Cart']");
     this.productInCartLoc = page.locator(
-      "(//span[text()='Lightweight Jacket'])[2]"
+      "(//span[text()='Special Edition T-Shirt'])[2]"
     );
   }
 
   async pageTitle() {
-    await expect(this.pageTitleLoc).toHaveText(
-      "Lightweight Jacket - ACME Storefront"
+    await expect(this.page).toHaveText(
+      "Special Edition T-Shirt - ACME Storefront"
     );
   }
 
@@ -34,8 +34,6 @@ exports.CartPage = class CartPage {
   }
 
   async productInCart() {
-    // await waitForLoadState();
-    // await page.waitForTimeout(10000);
-    expect(this.productInCartLoc).toContainText("Lightweight Jacket");
+    expect(this.productInCartLoc).toContainText("Special Edition T-Shirt");
   }
 };

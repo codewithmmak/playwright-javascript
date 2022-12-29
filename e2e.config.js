@@ -31,8 +31,8 @@ const config = {
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     // reporter: 'html',
     reporter: [
-        ['html'],
         ['list'],
+        ['html'],
         ['./my-awesome-reporter.js'],
         ['allure-playwright', { outputFolder: 'allure-results' }]
     ],

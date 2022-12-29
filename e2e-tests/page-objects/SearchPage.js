@@ -5,8 +5,8 @@ exports.SearchPage = class SearchPage {
     this.page = page;
     this.allLinkLoc = page.locator("//a[text()='All']");
     this.acmeLinkLoc = page.locator("a[href='/search/designers/acme']");
-    this.productLinkLoc = page.locator("//span[text()='Lightweight Jacket']");
-    this.pageTitleLoc = page.locator("(//title)[1]");
+    this.productLinkLoc = page.locator("//span[text()='Special Edition T-Shirt']");
+    this.pageHeaderLoc = page.locator("h3[class='ProductTag_name__C_niq'] span");
   }
 
   async navigatetoProductDetailPage() {
@@ -15,9 +15,7 @@ exports.SearchPage = class SearchPage {
     await this.productLinkLoc.click();
   }
 
-  async pageTitle() {
-    await expect(this.pageTitleLoc).toHaveText(
-      "Lightweight Jacket - ACME Storefront"
-    );
+  async pageHeader() {
+    await expect(this.pageHeaderLoc).toHaveText("Special Edition T-Shirt");
   }
 };

@@ -21,8 +21,9 @@ test.describe("Home Tests", () => {
     const homePage = new HomePage(page);
     await expect(homePage.topNavLinksLoc).toHaveText([
       "All",
-      "Apparel",
-      "Shop All",
+      "New Arrivals",
+      "Featured",
     ]);
   });
+
 });

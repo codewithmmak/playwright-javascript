@@ -4,7 +4,6 @@ exports.HomePage = class HomePage {
   constructor(page) {
     this.page = page;
     this.acceptCookies = page.locator(`//button[text()='Accept cookies']`);
-    this.pageTitleLoc = page.locator("(//title)[1]");
     this.logoLoc = page.locator('(//*[name()="rect"])[1]');
     this.topNavLinksLoc = page.locator(
       "//nav[@class='Navbar_navMenu__lJ9fT']/a"
@@ -18,9 +17,7 @@ exports.HomePage = class HomePage {
   }
 
   async pageTitle() {
-    await expect(this.pageTitleLoc).toHaveText(
-      "ACME Storefront | Powered by Next.js Commerce"
-    );
+    await expect(this.page).toHaveTitle("ACME Storefront | Powered by Next.js Commerce");
   }
 
   async logo() {

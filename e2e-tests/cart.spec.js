@@ -13,10 +13,10 @@ test.describe("Cart Tests", () => {
   test("Verify user is able to add product to Cart", async ({ page }) => {
     const searchPage = new SearchPage(page);
     await searchPage.navigatetoProductDetailPage();
-    await searchPage.pageTitle();
+    await searchPage.pageHeader();
 
     const cartPage = new CartPage(page);
-    await cartPage.selectColour();
+    // await cartPage.selectColour();
     await cartPage.selectSize();
     await cartPage.addToCart();
     // await page.waitForLoadState();

@@ -7,6 +7,8 @@
     "clean": "rimraf allure-results/ && rimraf allure-report/",
     "test": "playwright test",
     "headedTest": "playwright test --headed",
+    "single-test-file": "npm run clean && playwright test cart.spec.js --reporter=line",
+    "test-line-reporter": "npm run clean && playwright test -c e2e.config.js --reporter=line",
     "e2e": "npm run clean && playwright test -c e2e.config.js --reporter=line,./my-awesome-reporter.js,allure-playwright",
     "allure-report": "npx allure generate ./allure-results && allure open",
     "prettierCI": "npx prettier --check ./e2e-tests",
@@ -15,12 +17,12 @@
   "keywords": [],
   "author": "",
   "devDependencies": {
-    "@playwright/test": "^1.23.1",
-    "allure-commandline": "^2.17.2",
-    "allure-playwright": "^2.0.0-beta.18",
-    "npm-check-updates": "^15.0.2",
-    "prettier": "2.7.1",
+    "@playwright/test": "^1.29.1",
+    "allure-commandline": "^2.20.1",
+    "allure-playwright": "^2.0.0-beta.23",
+    "npm-check-updates": "^16.6.2",
+    "prettier": "2.8.1",
     "rimraf": "^3.0.2",
-    "saucectl": "^0.101.0"
+    "saucectl": "^0.117.1"
   }
 }

@@ -14,6 +14,6 @@ test.describe("Search Tests", () => {
   }) => {
     const searchPage = new SearchPage(page);
     await searchPage.navigatetoProductDetailPage();
-    await searchPage.pageTitle();
+    await searchPage.pageHeader();
   });
 });

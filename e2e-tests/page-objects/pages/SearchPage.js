@@ -7,7 +7,6 @@ exports.SearchPage = class SearchPage {
         this.allLinkLoc = page.locator("//a[text()='All']");
         this.acmeLinkLoc = page.locator("a[href='/search/designers/acme']")
         this.productLinkLoc = page.locator("//span[text()='Lightweight Jacket']");
-        this.pageTitleLoc = page.locator('(//title)[1]');
 
     }
 
@@ -18,7 +17,7 @@ exports.SearchPage = class SearchPage {
     }
 
     async pageTitle() {
-        await expect(this.pageTitleLoc).toHaveText('Lightweight Jacket - ACME Storefront');
+        await expect(this.page).toHaveText('Lightweight Jacket - ACME Storefront');
     }
 
 }
