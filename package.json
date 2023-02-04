@@ -27,6 +27,6 @@
     "copyfiles": "^2.4.1",
     "npm-check-updates": "^16.6.2",
     "rimraf": "^4.0.0",
-    "saucectl": "^0.121.0"
+    "saucectl": "^0.122.0"
   }
 }
