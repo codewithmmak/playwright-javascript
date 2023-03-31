@@ -21,12 +21,12 @@
   "keywords": [],
   "author": "Code with MMAK",
   "devDependencies": {
-    "@playwright/test": "^1.30.0",
-    "allure-commandline": "^2.20.1",
-    "allure-playwright": "^2.0.0-beta.26",
+    "@playwright/test": "^1.32.1",
+    "allure-commandline": "^2.21.0",
+    "allure-playwright": "^2.1.0",
     "copyfiles": "^2.4.1",
-    "npm-check-updates": "^16.7.2",
-    "rimraf": "^4.1.2",
+    "npm-check-updates": "^16.9.0",
+    "rimraf": "^4.4.1",
     "saucectl": "^0.132.0"
   }
 }
