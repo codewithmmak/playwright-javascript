@@ -25,7 +25,7 @@
     "allure-commandline": "^2.21.0",
     "allure-playwright": "^2.1.0",
     "copyfiles": "^2.4.1",
-    "npm-check-updates": "^16.9.0",
+    "npm-check-updates": "^17.0.0",
     "rimraf": "^5.0.0",
     "saucectl": "^0.147.0"
   }
