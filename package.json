@@ -23,7 +23,7 @@
   "devDependencies": {
     "@playwright/test": "^1.32.1",
     "allure-commandline": "^2.21.0",
-    "allure-playwright": "^2.1.0",
+    "allure-playwright": "^3.0.0",
     "copyfiles": "^2.4.1",
     "npm-check-updates": "^16.9.0",
     "rimraf": "^5.0.0",
