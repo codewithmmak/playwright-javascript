@@ -1,0 +1,15 @@
+{
+  "env": "qa",
+  "home": {
+    "title": "Acme Store",
+    "navLinks": ["All", "Shirts", "Stickers"]
+  },
+  "catalog": {
+    "categoryPath": "/search/stickers",
+    "productPath": "/product/acme-sticker",
+    "productName": "Acme Sticker"
+  },
+  "dataDefaults": {
+    "emailDomain": "qa.example.test"
+  }
+}

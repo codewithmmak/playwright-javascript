@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect } = require("./fixtures/testFixtures");
 const { SearchPage } = require("./page-objects/SearchPage");
 const { HomePage } = require("./page-objects/HomePage");
 const { CartPage } = require("./page-objects/CartPage");
@@ -10,17 +10,15 @@ test.describe("Cart Tests", () => {
     await homePage.pageTitle();
   });
 
-  test("Verify user is able to add product to Cart", async ({ page }) => {
-    const searchPage = new SearchPage(page);
+  test("Verify user is able to add product to Cart", async ({ page, testData, runtimeData }) => {
+    const searchPage = new SearchPage(page, testData.catalog);
     await searchPage.navigatetoProductDetailPage();
     await searchPage.pageHeader();
 
-    const cartPage = new CartPage(page);
-    // await cartPage.selectColour();
-    await cartPage.selectSize();
+    const cartPage = new CartPage(page, testData.catalog);
     await cartPage.addToCart();
-    // await page.waitForLoadState();
-    await page.waitForTimeout(2000);
     await cartPage.productInCart();
+
+    expect(runtimeData.orderRef).toContain("ORD-");
   });
 });

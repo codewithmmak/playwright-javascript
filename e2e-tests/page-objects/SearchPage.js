@@ -1,21 +1,23 @@
 const { expect } = require("@playwright/test");
 
 exports.SearchPage = class SearchPage {
-  constructor(page) {
+  constructor(page, catalogData = {}) {
     this.page = page;
-    this.allLinkLoc = page.locator("//a[text()='All']");
-    this.acmeLinkLoc = page.locator("a[href='/search/designers/acme']");
-    this.productLinkLoc = page.locator("//span[text()='Special Edition T-Shirt']");
-    this.pageHeaderLoc = page.locator("h3[class='ProductTag_name__C_niq'] span");
+    this.categoryPath = catalogData.categoryPath || "/search/stickers";
+    this.productPath = catalogData.productPath || "/product/acme-sticker";
+    this.productName = catalogData.productName || "Acme Sticker";
+
+    this.categoryLoc = page.locator(`nav a[href='${this.categoryPath}']`);
+    this.productLinkLoc = page.locator(`a[href='${this.productPath}']`).first();
+    this.pageHeaderLoc = page.getByRole("heading", { name: new RegExp(this.productName, "i") }).first();
   }
 
   async navigatetoProductDetailPage() {
-    await this.allLinkLoc.click();
-    await this.acmeLinkLoc.click();
+    await this.categoryLoc.click();
     await this.productLinkLoc.click();
   }
 
   async pageHeader() {
-    await expect(this.pageHeaderLoc).toHaveText("Special Edition T-Shirt");
+    await expect(this.pageHeaderLoc).toHaveText(this.productName);
   }
 };

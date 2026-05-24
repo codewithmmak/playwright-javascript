@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect } = require("./fixtures/testFixtures");
 const { HomePage } = require("./page-objects/HomePage");
 
 test.describe("Home Tests", () => {
@@ -17,13 +17,8 @@ test.describe("Home Tests", () => {
     await homePage.logo();
   });
 
-  test("Verify top navigation on Home page", async ({ page }) => {
+  test("Verify top navigation on Home page", async ({ page, testData }) => {
     const homePage = new HomePage(page);
-    await expect(homePage.topNavLinksLoc).toHaveText([
-      "All",
-      "New Arrivals",
-      "Featured",
-    ]);
+    await expect(homePage.topNavLinksLoc).toHaveText(testData.home.navLinks);
   });
-
 });

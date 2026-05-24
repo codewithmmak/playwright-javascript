@@ -1,4 +1,4 @@
-const { config } = require('./e2e.config');
+const config = require("./e2e.config");
 
 // =====================
 // Sauce specific config
@@ -6,7 +6,7 @@ const { config } = require('./e2e.config');
 // See https://webdriver.io/docs/sauce-service.html for more information
 config.user = process.env.SAUCE_USERNAME;
 config.key = process.env.SAUCE_ACCESS_KEY;
-config.region = process.env.REGION || 'us';
+config.region = process.env.REGION || "us";
 
 // ===================================================================================
 // Capabilities
@@ -20,22 +20,22 @@ config.region = process.env.REGION || 'us';
 // https://wiki.saucelabs.com/display/DOCS/W3C+Capabilities+Support
 // ===================================================================================
 config.capabilities = [
-    {
-        // For the W3C capabilities, please check
-        // https://www.w3.org/TR/webdriver1/#capabilities
-        browserName: 'chrome',
-        platformName: 'Windows 10',
-        browserVersion: 'latest',
-        // All vendor specific, in this case Sauce specific capabilities, should be
-        // put in vendor prefixed options, see
-        // https://www.w3.org/TR/webdriver1/#dfn-extension-capability
-        'sauce:options': {
-            build: `Sauce Labs build-${new Date().getTime()}`,
-            screenResolution: '1440x900'
-        },
+  {
+    // For the W3C capabilities, please check
+    // https://www.w3.org/TR/webdriver1/#capabilities
+    browserName: "chrome",
+    platformName: "Windows 10",
+    browserVersion: "latest",
+    // All vendor specific, in this case Sauce specific capabilities, should be
+    // put in vendor prefixed options, see
+    // https://www.w3.org/TR/webdriver1/#dfn-extension-capability
+    "sauce:options": {
+      build: `Sauce Labs build-${new Date().getTime()}`,
+      screenResolution: "1440x900",
     },
+  },
 ];
 
-config.services = config.services.concat('sauce');
+config.services = [...(config.services || []), "sauce"];
 
 exports.config = config;
